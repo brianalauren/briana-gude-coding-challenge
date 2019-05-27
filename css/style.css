@@ -16,9 +16,12 @@
     box-shadow: none; }
 
 .container {
-  width: 100vw;
+  width: 100%;
   padding: 0 124px;
   text-align: center; }
+
+.mobile {
+  display: none !important; }
 
 section {
   min-height: 440px;
@@ -83,10 +86,17 @@ header {
   height: 64px;
   padding: 0 124px;
   margin-top: 8px;
-  z-index: 2; }
+  z-index: 2;
+  /* Style The Dropdown Button */
+  /* The container <div> - needed to position the dropdown content */
+  /* Dropdown Content (Hidden by Default) */
+  /* Links inside the dropdown */
+  /* Change color of dropdown links on hover */
+  /* Show the dropdown menu on hover */ }
   header nav a {
     margin: 0.5em;
-    color: white; }
+    color: white;
+    font-weight: 900; }
   header .logo a {
     font-weight: 900; }
   header .links a:hover {
@@ -98,6 +108,39 @@ header {
     margin-left: 16px; }
     header .btn:hover {
       color: white !important; }
+  header .dropbtn {
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 0; }
+  header .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 4px; }
+  header .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7FD1B9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 0 8px 8px 8px; }
+  header .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; }
+    header .dropdown-content a:first-child {
+      border-radius: 0 8px 0 0; }
+    header .dropdown-content a:last-child {
+      border-radius: 0 0 8px 8px; }
+  header .dropdown-content a:hover {
+    font-weight: 900;
+    background-color: #F6AF42; }
+  header .dropdown:hover .dropdown-content {
+    display: block; }
+  header .dropdown:hover .dropbtn {
+    border-radius: 8px 8px 0 0; }
 
 .r1, .r2, .r3, .r4 {
   position: absolute;
@@ -138,6 +181,7 @@ header {
     color: #7FD1B9; }
   #home input[type=text] {
     width: 400px;
+    max-width: 400px !important;
     padding: 22px;
     background: white;
     border-radius: 8px;
@@ -179,7 +223,7 @@ header {
     height: 32px; }
 
 #why-us .info {
-  width: 720px;
+  max-width: 720px;
   margin: auto; }
 #why-us .btn {
   background-color: #F6AF42;
@@ -206,8 +250,6 @@ header {
   background: #7FD1B930;
   border-radius: 8px;
   border: solid #7FD1B9; }
-  #services .service-box .outer-box {
-    width: 75%; }
   #services .service-box h4 {
     margin-top: 16px; }
   #services .service-box img {
@@ -243,6 +285,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     align-items: flex-start; }
+    footer .container div {
+      width: 80%; }
     footer .container p {
       margin: 0;
       text-align: left;
@@ -261,12 +305,46 @@ footer {
       footer .container li img:hover {
         opacity: 1;
         cursor: pointer; }
-    footer .container .contact {
-      width: 240px; }
-      footer .container .contact li img {
-        opacity: 1 !important;
-        float: left;
-        height: 20px;
-        margin: 8px; }
+    footer .container .contact li img {
+      opacity: 1 !important;
+      float: left;
+      height: 20px;
+      margin-right: 8px; }
+
+@media (max-width: 1100px) {
+  .desktop {
+    display: none !important; }
+
+  .mobile {
+    display: block !important; }
+
+  #services .outer-box {
+    width: 100%; }
+
+  footer .container {
+    flex-wrap: wrap; }
+    footer .container div {
+      width: 40% !important;
+      margin-bottom: 16px; }
+      footer .container div .horizontal li {
+        display: inline-block;
+        padding-right: 16px;
+        float: left; } }
+@media (max-width: 850px) {
+  html {
+    font-size: 16px; }
+
+  .container {
+    padding: 0 40px; }
+
+  .acct .container {
+    justify-content: center;
+    flex-wrap: wrap; }
+    .acct .container .btns {
+      text-align: center;
+      margin-top: 8px; }
+    .acct .container div {
+      text-align: center;
+      width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

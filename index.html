@@ -22,7 +22,7 @@
 <body>
   <header>
     <nav class="logo"><a href="index.html">Briana's Flower Shop</a></nav>
-    <nav class="links">
+    <nav class="links desktop">
       <a href="#home">Home</a>
       <a href="#why-us">Why Us</a>
       <a href="#services">Services</a>
@@ -30,6 +30,17 @@
       <a href="#" style="margin-left: 48px;">Log In</a>
       <a href="#" class="btn">Support</a>
     </nav>
+    <div class="dropdown mobile">
+      <button class="dropbtn btn">Menu</button>
+      <div class="dropdown-content">
+        <a href="#home">Home</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#services">Services</a>
+        <a href="#footer">Contact Us</a>
+        <a href="#">Log In</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
   </header>
 
 
@@ -47,7 +58,7 @@
         </div>
 
         <div class="cont">
-          <small>Freshly cut & delivered to your door!</small><br />
+          <small>Learn how we can deliver to your event</small><br />
           <a href="#why-us" class="btn"><img src="img/arrow.png" /></a>
         </div>
       </div>
@@ -164,7 +175,7 @@
         </ul>
       </div>
       <div class="content">
-        <ul>
+        <ul class="horizontal">
           <li><img src="img/ig.png" /></li>
           <li><img src="img/tw.png" /></li>
           <li><img src="img/fb.png" /></li>
