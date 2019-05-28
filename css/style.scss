@@ -71,7 +71,6 @@ body{
   font-weight: 400;
   line-height: 1.45;
   color: #333;
-  // overflow-x: none;
 }
 
 p {margin-bottom: 1.25em;}
@@ -137,6 +136,9 @@ header{
     }
   }
 
+  input[type=checkbox]{display: none;}
+  input[type=checkbox]:checked ~ ul {display: block}
+
 .dropbtn {
   color: white;
   font-weight: 900;
@@ -149,6 +151,8 @@ header{
   display: inline-block;
   float: right;
   margin: 4px;
+
+  a{color: white;}
 }
 
 .dropdown-content {
@@ -159,7 +163,8 @@ header{
   min-width: 160px;
   box-shadow: 8px 0 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
-  border-radius: 8px 0 8px 8px;
+  border-radius: 8px;
+  margin-top: 8px;
 }
 
 .dropdown-content a {
@@ -170,23 +175,12 @@ header{
 
   &:first-child{border-radius: 8px 0 0 0;}
   &:last-child{border-radius: 0 0 8px 8px;}
-  &:hover .dropdown-content {
-    display: block;
+}
+
+  .dropdown-content a:hover {
+    font-weight: 900;
+    background-color: $accent1;
   }
-}
-
-.dropdown-content a:hover {
-  font-weight: 900;
-  background-color: $accent1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  border-radius: 8px 8px 0 0;
-}
 }
 
 .r1, .r2, .r3, .r4{
@@ -229,13 +223,10 @@ header{
   position: relative;
 
   h1, small{color: white;}
-
-  span{
-    color: $secondary-color;
-  }
+  span{color: $secondary-color;}
 
   input[type=text]{
-    width: 240px;
+    width: 360px;
     padding: 22px;
     background: white;
     border-radius: 8px;
@@ -272,9 +263,7 @@ header{
     padding-top: 180px;
   }
 
-  .cont{
-    margin-top: 96px;
-  }
+  .cont{margin-top: 96px;}
 
   .cont a{
     background: $secondary-color;
@@ -342,7 +331,7 @@ header{
   .btns{text-align: right;}
   .btn-1{background: $accent1};
 
-  h3{margin: 0;}
+  h3{margin: 0};
   span{color: $accent1};
   div{
     text-align: left;
@@ -373,10 +362,8 @@ footer{
 
     li.address {
       padding-top: 6px;
-      p{
-        line-height:1.2;
-        float: right;
-      }
+      p{line-height:1.2;}
+      img{margin-bottom: 64px;}
     }
 
     li img{
