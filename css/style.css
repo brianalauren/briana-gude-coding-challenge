@@ -86,13 +86,7 @@ header {
   height: 64px;
   padding: 0 124px;
   margin-top: 8px;
-  z-index: 2;
-  /* Style The Dropdown Button */
-  /* The container <div> - needed to position the dropdown content */
-  /* Dropdown Content (Hidden by Default) */
-  /* Links inside the dropdown */
-  /* Change color of dropdown links on hover */
-  /* Show the dropdown menu on hover */ }
+  z-index: 2; }
   header nav a {
     margin: 0.5em;
     color: white;
@@ -116,6 +110,7 @@ header {
   header .dropdown {
     position: relative;
     display: inline-block;
+    float: right;
     margin: 4px; }
   header .dropdown-content {
     display: none;
@@ -180,8 +175,7 @@ header {
   #home span {
     color: #7FD1B9; }
   #home input[type=text] {
-    width: 400px;
-    max-width: 400px !important;
+    width: 240px;
     padding: 22px;
     background: white;
     border-radius: 8px;
@@ -220,7 +214,8 @@ header {
     margin-top: 16px; }
   #home .cont img {
     width: auto;
-    height: 32px; }
+    height: 32px;
+    margin-top: 8px; }
 
 #why-us .info {
   max-width: 720px;
@@ -285,8 +280,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     align-items: flex-start; }
-    footer .container div {
-      width: 80%; }
     footer .container p {
       margin: 0;
       text-align: left;
@@ -295,7 +288,8 @@ footer {
     footer .container li.address {
       padding-top: 6px; }
       footer .container li.address p {
-        line-height: 1.2; }
+        line-height: 1.2;
+        float: right; }
     footer .container li img {
       height: 24px;
       width: auto;
@@ -311,6 +305,9 @@ footer {
       height: 20px;
       margin-right: 8px; }
 
+@media (max-width: 1400px) {
+  #services .service-box {
+    min-height: 260px; } }
 @media (max-width: 1100px) {
   .desktop {
     display: none !important; }
@@ -318,8 +315,14 @@ footer {
   .mobile {
     display: block !important; }
 
+  #home .home-content {
+    width: auto; }
+
   #services .outer-box {
     width: 100%; }
+
+  #services .service-box {
+    min-height: 200px; }
 
   footer .container {
     flex-wrap: wrap; }
@@ -334,7 +337,10 @@ footer {
   html {
     font-size: 16px; }
 
-  .container {
+  footer .contact img {
+    display: none; }
+
+  .container, header {
     padding: 0 20px; }
 
   .acct .container {

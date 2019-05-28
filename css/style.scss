@@ -136,26 +136,20 @@ header{
     }
   }
 
-  /* Style The Dropdown Button */
 .dropbtn {
-  // background-color: transparent;
   color: white;
-  // padding: 16px;
   font-weight: 900;
-  // border: none;
   cursor: pointer;
   margin: 0;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
+  float: right;
   margin: 4px;
-  // background:transparent;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -166,7 +160,6 @@ header{
   border-radius: 0 8px 8px 8px;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: white;
   padding: 12px 16px;
@@ -177,21 +170,17 @@ header{
   &:last-child{border-radius: 0 0 8px 8px;}
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  // text-decoration: underline;
   font-weight: 900;
   background-color: $accent1;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 .dropdown:hover .dropbtn {
   border-radius: 8px 8px 0 0;
-  // background-color: transparent;
 }
 }
 
@@ -229,7 +218,7 @@ header{
   clip-path: polygon(0 45%, 100% 0, 100% 100%, 0% 100%);
 }
 
-#home{
+#home {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -241,8 +230,7 @@ header{
   }
 
   input[type=text]{
-    width: 400px;
-    max-width: 400px !important;
+    width: 240px;
     padding: 22px;
     background: white;
     border-radius: 8px;
@@ -294,6 +282,7 @@ header{
   .cont img{
     width: auto;
     height: 32px;
+    margin-top: 8px;
   }
 }
 
@@ -368,7 +357,6 @@ footer{
   .container{
     @include flex(space-between);
     align-items: flex-start;
-    div{width: 80%;}
 
     p{
       margin: 0;
@@ -379,7 +367,10 @@ footer{
 
     li.address {
       padding-top: 6px;
-      p{line-height:1.2;}
+      p{
+        line-height:1.2;
+        float: right;
+      }
     }
 
     li img{
@@ -396,8 +387,6 @@ footer{
     }
 
     .contact {
-      // width: 240px;
-
       li img {
       opacity: 1 !important;
       float: left;
@@ -411,46 +400,44 @@ footer{
 
 
 // MEDIA QUERIES
+@media (max-width: 1400px){
+  #services .service-box{min-height: 260px;}
+}
 @media (max-width: 1100px){
   .desktop{display: none !important;}
   .mobile{display: block !important;}
 
-  #services .outer-box{
-    width: 100%;
-  }
+  #home .home-content{width: auto;}
+  #services .outer-box{width: 100%;}
+  #services .service-box{min-height: 200px;}
 
   footer .container {
     flex-wrap: wrap;
-  div{
-    width: 40% !important;
-    margin-bottom: 16px;
-    // background: pink;
-    .horizontal li{
-      display: inline-block;
-      padding-right: 16px;
-      float:left;
+    div{
+      width: 40% !important;
+      margin-bottom: 16px;
+      .horizontal li{
+        display: inline-block;
+        padding-right: 16px;
+        float:left;
+      }
     }
-
   }
-}
 }
 
 @media (max-width: 850px){
   html{font-size: 16px;}
-  .container{padding: 0 20px;}
-  #why-us .info p{
-  }
+  footer .contact img{display:none;}
+  .container, header{padding: 0 20px;}
   .acct .container {
     justify-content: center;
     flex-wrap: wrap;.btns{
       text-align: center;
       margin-top: 8px;
     }
-  div{
-      text-align: center;
-      width: 100%;
+    div{
+        text-align: center;
+        width: 100%;
     }
   }
-
-
 }
